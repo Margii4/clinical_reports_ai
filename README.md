@@ -107,5 +107,3 @@ python test_groundtruth.py output.json "Clinical Reports AI dictionary.json"
 ## 📄 License
 
 MIT — use for your tests, portfolio, hackathons, or real-world production.
-
-```
