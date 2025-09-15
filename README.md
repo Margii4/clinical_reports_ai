@@ -109,4 +109,3 @@ python test_groundtruth.py output.json "Clinical Reports AI dictionary.json"
 MIT — use for your tests, portfolio, hackathons, or real-world production.
 
 ```
-```
