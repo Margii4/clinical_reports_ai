@@ -1,0 +1,34 @@
+# ⛔ Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+
+# ⛔ Jupyter/Streamlit temp
+.ipynb_checkpoints/
+*.streamlit/
+
+# ⛔ Environment
+.env
+.env.*
+venv/
+.venv/
+
+# ⛔ OS metadata
+.DS_Store
+Thumbs.db
+
+# ⛔ Compiled
+*.exe
+*.dll
+*.out
+*.app
+
+# ⛔ IDE configs
+.vscode/
+.idea/
+
+# ⛔ Output
+output.json

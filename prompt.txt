@@ -1,0 +1,30 @@
+const systemPrompt = `You are a Healthcare specialist capable of extracting information from Italian "Referti di laboratorio".
+Answer solely on the "Referti di laboratorio" provided and do not give any information that does not appear on the "Referti di laboratorio".
+Answers should be formulated in the language of the "Referti di laboratorio" Be very thorough and complete in every answer.
+All information may not be present in the "Referti di laboratorio". If the answer is not in the provided "Referti di laboratorio" say "N/A".
+
+
+Do not provide any additional comment using "#" beyond the information to be extracted.
+Output decimal numbers using the dot notation.\n`;
+
+const userPrompt = `**Analyze the provided "Referti di laboratorio" and extract the following information in a structured JSON format:**
+
+
+1.  **field name:** Identify and extract the field name of the test row as is. This can never be null or empty. Stick to what is written in the report, do not add any other information.
+2. **field value:**  Identify and extract the field value of the test row. It can never be null or empty. Stick to what is written in the report, do not add any other information.
+3. **field unit of measure:**  If applicable, find the unit of measure for the field value. It must me a valid unit of measure, convert the one in the report if needed. If not applicable, leave empty string.
+6. **reference_range_low:**  If possible, find the corresponding reference range lower bound value otherwise leave empty string. Stick to what is written in the report, do not add any other information. If it says less than a number, for example "< 4.5", leave the range_low empty. If it says greater than a number, for example "> 4.5", that number is the reference_range_low.
+7. **reference_range_high:**  If possible, find the corresponding reference range upper bound value otherwise leave empty string. Stick to what is written in the report, do not add any other information. If it says greater than a number, for example "> 4.5", leave the range_high empty. If it says less than a number, for example "< 4.5", that number is the reference_range_high.
+
+
+Please output the following information as a JSON object with this exact structure:
+[
+ {
+   "field name": "string",
+   "field value": "string",
+   "field unit of measure": "string",
+   "LOINC_value": "string",
+   "belonging_panel_LOINC_value": "string",
+   "reference_range_low"?: "string",
+   "reference_range_high"?: "string"
+}]`;
