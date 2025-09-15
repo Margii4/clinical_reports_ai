@@ -1,4 +1,3 @@
-```markdown
 # 🏥 Clinical Reports AI: Italian Lab Report Structuring with OCR & GPT-4o
 
 This project automatically extracts and structures data from scanned Italian laboratory reports (referti) using OCR and GPT-4o, achieving 100% accuracy on the test set.
